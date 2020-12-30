@@ -49,12 +49,8 @@ export const NavLinks = styled(LinkR)`
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
-  height: 100%;
+  margin-top: 15px;
   cursor: pointer;
-
-  &.active {
-    border-bottom: 3px solid #01bf71;
-  }
 `;
 
 export const CardContent = styled.div`
@@ -89,4 +85,44 @@ export const ShoppingIcon = styled(ShoppingCart)`
 
 export const ContainerOptions = styled.div`
   display: flex;
+`;
+
+export const ContainerTooltip = styled.div`
+  background-color: white;
+  height: ${(props) => (props.height === 0 ? "200px" : `${props.height}px`)};
+  width: 400px;
+  display: flex;
+  border-radius: 5px;
+  flex-direction: column;
+`;
+
+export const TitleTooltip = styled.h1`
+  color: black;
+  text-align: start;
+  font-size: 14px;
+  margin: 10px;
+  display: block;
+`;
+
+export const ContainerProducts = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ContentProduct = styled.div`
+  display: flex;
+  justify-content: space-between;
+  div {
+    color: red;
+    margin: 0 5px;
+    font-size: 14px;
+  }
+`;
+
+export const TotalCost = styled(ContentProduct)`
+  div {
+    color: black;
+    margin: 0 10px;
+    font-size: 16px;
+  }
 `;
